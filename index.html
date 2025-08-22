@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-decor"></div>
+
+  <main class="container">
+    <header class="app-header">
+      <h1>Age Calculator</h1>
+      <p class="sub">Select your birth date to see your live age</p>
+    </header>
+
+    <section class="card">
+      <form id="ageForm" autocomplete="off">
+        <label for="dob">Birth Date</label>
+        <input
+          type="date"
+          id="dob"
+          name="dob"
+          required
+        />
+
+        <div class="btn-row">
+          <button type="submit" class="btn primary">Calculate</button>
+          <button type="button" class="btn ghost" id="resetBtn">Reset</button>
+        </div>
+
+        <p id="error" class="error" role="alert" aria-live="polite"></p>
+      </form>
+
+      <div id="result" class="result hidden" aria-live="polite">
+        <div class="grid">
+          <div class="tile">
+            <span class="num" id="years">0</span>
+            <span class="label">Years</span>
+          </div>
+          <div class="tile">
+            <span class="num" id="months">0</span>
+            <span class="label">Months</span>
+          </div>
+          <div class="tile">
+            <span class="num" id="days">0</span>
+            <span class="label">Days</span>
+          </div>
+          <div class="tile">
+            <span class="num" id="hours">00</span>
+            <span class="label">Hours</span>
+          </div>
+          <div class="tile">
+            <span class="num" id="minutes">00</span>
+            <span class="label">Minutes</span>
+          </div>
+          <div class="tile">
+            <span class="num" id="seconds">00</span>
+            <span class="label">Seconds</span>
+          </div>
+        </div>
+
+        <div class="meta">
+          <p>
+            <strong>From:</strong> <span id="fromText">—</span>
+            &nbsp;|&nbsp;
+            <strong>To (now):</strong> <span id="toText">—</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <small>Made for you — live, accurate & elegant ✨</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
